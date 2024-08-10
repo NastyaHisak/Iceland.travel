@@ -6,11 +6,13 @@ $(document).ready(function () {
 
     document.getElementById('burger').onclick = function () {
         document.getElementById('menu').classList.add('open');
+        document.body.classList.add('locked');
     }
 
     document.querySelectorAll('#menu *').forEach((item) => {
         item.onclick = () => {
             document.getElementById('menu').classList.remove('open');
+            document.body.classList.remove('locked');
         }
     })
 
